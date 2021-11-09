@@ -15,7 +15,7 @@ Vue.filter('formatDate', function(value) {
     }
 });
 
-axios.defaults.baseURL = 'http://localhost:8000'
+axios.defaults.baseURL = 'https://mymeetapi.herokuapp.com/'
 
 axios.defaults.withCredentials = true
 
