@@ -34,7 +34,7 @@ export default {
             return dispatch('me')
         },
         me ({ commit }){
-            return axios.get('/api/user').then(response => {
+            return axios.get('https://mymeetapi.herokuapp.com/api/user').then(response => {
                 // console.log(response)
                 commit('SET_AUTHENTICATED', true)
                 commit('SET_USER', response.data)
