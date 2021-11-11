@@ -29,12 +29,12 @@ export default {
 
     actions: {
         async login ({ dispatch }, credentials ){
-            await axios.get('https://mymeetapi.herokuapp.com/sanctum/csrf-cookie')
-            await axios.post('https://mymeetapi.herokuapp.com/api/login', credentials)          
+            await axios.get('/sanctum/csrf-cookie')
+            await axios.post('/api/login', credentials)          
             return dispatch('me')
         },
         me ({ commit }){
-            return axios.get('https://mymeetapi.herokuapp.com/api/user').then(response => {
+            return axios.get('/api/user').then(response => {
                 // console.log(response)
                 commit('SET_AUTHENTICATED', true)
                 commit('SET_USER', response.data)

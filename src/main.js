@@ -18,6 +18,7 @@ Vue.filter('formatDate', function(value) {
 axios.defaults.baseURL = 'https://mymeetapi.herokuapp.com'
 
 axios.defaults.withCredentials = true
+axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 import '@/assets/css/tailwind.css'
 
