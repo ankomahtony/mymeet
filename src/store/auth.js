@@ -29,8 +29,8 @@ export default {
 
     actions: {
         async login ({ dispatch }, credentials ){
-            await axios.get('/sanctum/csrf-cookie')
-            await axios.post('/api/login', credentials)          
+            await axios.get('https://mymeetapi.herokuapp.com/sanctum/csrf-cookie')
+            await axios.post('https://mymeetapi.herokuapp.com/api/login', credentials)          
             return dispatch('me')
         },
         me ({ commit }){
